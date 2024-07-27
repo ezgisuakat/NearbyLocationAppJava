@@ -1,0 +1,12 @@
+/Users/ezgisuakat/Desktop/NearByLocationProject/NearByLocationServiceLib/src/main/java/org/ezgi/app/nearbylocation/service/PlaceInfoLocationService.java
+/Users/ezgisuakat/Desktop/NearByLocationProject/NearByLocationServiceLib/src/main/java/org/ezgi/app/nearbylocation/service/dto/PlaceInfoLocationDTO.java
+/Users/ezgisuakat/Desktop/NearByLocationProject/NearByLocationServiceLib/src/main/java/org/ezgi/app/nearbylocation/service/dto/PlaceLocationDTO.java
+/Users/ezgisuakat/Desktop/NearByLocationProject/NearByLocationServiceLib/src/main/java/org/ezgi/app/nearbylocation/service/dto/classes/Geometry.java
+/Users/ezgisuakat/Desktop/NearByLocationProject/NearByLocationServiceLib/src/main/java/org/ezgi/app/nearbylocation/service/dto/classes/Location.java
+/Users/ezgisuakat/Desktop/NearByLocationProject/NearByLocationServiceLib/src/main/java/org/ezgi/app/nearbylocation/service/dto/classes/Northeast.java
+/Users/ezgisuakat/Desktop/NearByLocationProject/NearByLocationServiceLib/src/main/java/org/ezgi/app/nearbylocation/service/dto/classes/OpeningHours.java
+/Users/ezgisuakat/Desktop/NearByLocationProject/NearByLocationServiceLib/src/main/java/org/ezgi/app/nearbylocation/service/dto/classes/Photo.java
+/Users/ezgisuakat/Desktop/NearByLocationProject/NearByLocationServiceLib/src/main/java/org/ezgi/app/nearbylocation/service/dto/classes/PlusCode.java
+/Users/ezgisuakat/Desktop/NearByLocationProject/NearByLocationServiceLib/src/main/java/org/ezgi/app/nearbylocation/service/dto/classes/Southwest.java
+/Users/ezgisuakat/Desktop/NearByLocationProject/NearByLocationServiceLib/src/main/java/org/ezgi/app/nearbylocation/service/dto/classes/Viewport.java
+/Users/ezgisuakat/Desktop/NearByLocationProject/NearByLocationServiceLib/src/main/java/org/ezgi/app/nearbylocation/service/mapper/IPlaceInfoLocationMapper.java

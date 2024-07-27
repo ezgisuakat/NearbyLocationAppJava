@@ -1,0 +1,13 @@
+org/ezgi/app/nearbylocation/search/dto/NearByLocationDTO.class
+org/ezgi/app/nearbylocation/search/dto/classes/Northeast.class
+org/ezgi/app/nearbylocation/search/dto/classes/Photo.class
+org/ezgi/app/nearbylocation/search/dto/classes/Geometry.class
+org/ezgi/app/nearbylocation/search/dto/classes/Viewport.class
+org/ezgi/app/nearbylocation/search/dto/classes/PlusCode.class
+org/ezgi/app/nearbylocation/search/dto/classes/Location.class
+org/ezgi/app/nearbylocation/search/dto/NearByLocationInfoDTO.class
+org/ezgi/app/nearbylocation/search/dto/NearByLocationResultDTO.class
+org/ezgi/app/nearbylocation/search/NearByLocationInfoSearchHelper.class
+org/ezgi/app/nearbylocation/search/dto/classes/OpeningHours.class
+org/ezgi/app/nearbylocation/search/configuration/RestTemplateConfig.class
+org/ezgi/app/nearbylocation/search/dto/classes/Southwest.class
