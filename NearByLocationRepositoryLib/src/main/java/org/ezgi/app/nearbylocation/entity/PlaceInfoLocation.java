@@ -2,9 +2,9 @@ package org.ezgi.app.nearbylocation.entity;
 
 import jakarta.persistence.*;
 import org.ezgi.app.nearbylocation.entity.classes.Geometry;
-import org.ezgi.app.nearbylocation.entity.classes.PlusCode;
 import org.ezgi.app.nearbylocation.entity.classes.OpeningHours;
 import org.ezgi.app.nearbylocation.entity.classes.Photo;
+import org.ezgi.app.nearbylocation.entity.classes.PlusCode;
 
 import java.util.ArrayList;
 import java.util.Objects;
@@ -31,6 +31,7 @@ public class PlaceInfoLocation {
     public int user_ratings_total;
     public String vicinity;
 
+
     public Geometry geometry;
 
     public PlusCode plus_code;
@@ -46,14 +47,15 @@ public class PlaceInfoLocation {
     @Override
     public int hashCode()
     {
-        return Objects.hash(id, geometry);
+        return Objects.hash(id, geometry, icon);
     }
 
     @Override
     public boolean equals(Object other)
     {
         return other instanceof PlaceInfoLocation p && Objects.equals(id, p.id)
-                                                    && Objects.equals(geometry, p.geometry);
+                                                    && Objects.equals(geometry, p.geometry)
+                                                    && Objects.equals(icon, p.icon);
     }
 }
 

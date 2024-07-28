@@ -11,6 +11,6 @@ import java.util.Optional;
 @Repository
 public interface ICoordinatInfoLocationRepository extends CrudRepository<CoordinatInfoLocation, Integer> {
 
-    boolean existsByLangitudeAndLongitudeAndRadius(double langitude, double longitude, double radius);
-    Optional<CoordinatInfoLocation> findByLatitudeAndLongitudeAndRadius(double latitude, double longitude, double radius);
+    boolean existsByLatitudeAndLongitudeAndRadius(@Param("latitude") double latitude, @Param("longitude") double longitude, @Param("radius") double radius);
+    Optional<CoordinatInfoLocation> findByLatitudeAndLongitudeAndRadius(@Param("latitude") double latitude, @Param("longitude") double longitude, @Param("radius") double radius);
 }

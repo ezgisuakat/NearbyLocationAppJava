@@ -1,5 +1,6 @@
 package org.ezgi.app.nearbylocation.service;
 
+import com.karandev.util.data.service.DataServiceException;
 import org.ezgi.app.nearbylocation.dal.PlaceInfoLocationDataHelper;
 import org.ezgi.app.nearbylocation.entity.PlaceInfoLocation;
 import org.ezgi.app.nearbylocation.search.NearByLocationInfoSearchHelper;
@@ -35,18 +36,21 @@ public class PlaceInfoLocationService {
     {
         var nearbyLocation =  m_nearByLocationInfoSearchHelper.findNearByLocationByCoordinate(latitude, longitude, radius).get();
 
-         m_placeInfoLocationDataHelper.saveCoordinatInfoLocation(m_placeInfoLocationMapper.toCoordinatInfoLocation(latitude, longitude, radius, nearbyLocation));
+        var cil = m_placeInfoLocationDataHelper.saveCoordinatInfoLocation(m_placeInfoLocationMapper.toCoordinatInfoLocation(latitude, longitude, radius, nearbyLocation));
 
         return m_placeInfoLocationMapper.toPlaceLocationDTO(nearbyLocation);
     }
 
 
-    public PlaceLocationDTO findLocationByLatitudeAndLongitudeAndLatitude(double latitude, double longitude, double radius)
+    public PlaceLocationDTO findLocationByLatitudeAndLongitudeAndRadius(double latitude, double longitude, double radius)
     {
-        return m_placeInfoLocationDataHelper.existByLocationByLatitudeAndLongitudeAndRadius(latitude, longitude, radius) ? exitsInDbCallback(latitude, longitude, radius) : notExistsInDbCallback(latitude, longitude, radius);
+        try {
+            return m_placeInfoLocationDataHelper.existLocationByLatitudeAndLongitudeAndRadius(latitude, longitude, radius) ? exitsInDbCallback(latitude, longitude, radius) : notExistsInDbCallback(latitude, longitude, radius);
+        }
+        catch(Throwable ex){
+            throw new DataServiceException("PlaceInfoLocationService.findLocation", ex);
+        }
     }
-
-
 
     //...
 }

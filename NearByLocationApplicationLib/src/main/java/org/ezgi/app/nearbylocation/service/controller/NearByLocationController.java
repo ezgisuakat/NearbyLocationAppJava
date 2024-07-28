@@ -21,6 +21,6 @@ public class NearByLocationController {
     @GetMapping("")
     public PlaceLocationDTO findLocationInfo(@RequestParam(name = "latitude") double latitude, @RequestParam(name = "longitude") double longitude, @RequestParam(name = "radius") double radius)
     {
-        return m_PlaceInfoLocationService.findLocationByLatitudeAndLongitudeAndLatitude(latitude, longitude, radius);
+        return m_PlaceInfoLocationService.findLocationByLatitudeAndLongitudeAndRadius(latitude, longitude, radius);
     }
 }

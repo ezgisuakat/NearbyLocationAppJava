@@ -22,24 +22,38 @@ public class PlaceInfoLocationDataHelper {
         m_placeInfoLocationRepository = placeInfoLocationRepository;
     }
 
-    public PlaceInfoLocation savePlaceInfoLocation(PlaceInfoLocation placeInfoLocation)
-    {
-        return m_placeInfoLocationRepository.save(placeInfoLocation);
-    }
 
-    public boolean existByLocationByLatitudeAndLongitudeAndRadius(double langitude, double longitude, double radius)
+    public boolean existLocationByLatitudeAndLongitudeAndRadius(double latitude, double longitude, double radius)
     {
-        return m_coordinatInfoLocationRepository.existsByLangitudeAndLongitudeAndRadius(langitude, longitude, radius);
+        try {
+            return m_coordinatInfoLocationRepository.existsByLatitudeAndLongitudeAndRadius(latitude, longitude, radius);
+        }
+        catch(Throwable ex)
+        {
+            throw new RuntimeException("NearByLocationRepositoryLib.existLocation", ex);
+        }
     }
 
     public Optional<CoordinatInfoLocation> findLocationInfoByLatitudeAndLongitudeAndLatitude(double latitude, double longitude, double radius)
     {
-        return m_coordinatInfoLocationRepository.findByLatitudeAndLongitudeAndRadius(latitude, longitude, radius);
+        try {
+            return m_coordinatInfoLocationRepository.findByLatitudeAndLongitudeAndRadius(latitude, longitude, radius);
+        }
+        catch(Throwable ex)
+        {
+            throw new RuntimeException("NearByLocationRepositoryLib.findLocation", ex);
+        }
     }
 
-    public void saveCoordinatInfoLocation(CoordinatInfoLocation coordinatInfoLocation)
+    public CoordinatInfoLocation saveCoordinatInfoLocation(CoordinatInfoLocation coordinatInfoLocation)
     {
-        m_coordinatInfoLocationRepository.save(coordinatInfoLocation);
+        try {
+            return m_coordinatInfoLocationRepository.save(coordinatInfoLocation);
+        }
+        catch(Throwable ex)
+        {
+            throw new RuntimeException("NearByLocationRepositoryLib.saveCoordinatInfoLocation", ex);
+        }
     }
     //...
 }

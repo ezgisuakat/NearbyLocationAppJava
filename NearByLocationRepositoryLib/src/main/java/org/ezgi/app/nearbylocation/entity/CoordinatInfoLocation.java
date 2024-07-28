@@ -19,7 +19,7 @@ public class CoordinatInfoLocation {
     public double radius;
 
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "placeInfoLocation", cascade = CascadeType.ALL)
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "coordinatInfoLocation", cascade = CascadeType.ALL)
     public Set<PlaceInfoLocation> placeInfoLocations;
 
     @Override
