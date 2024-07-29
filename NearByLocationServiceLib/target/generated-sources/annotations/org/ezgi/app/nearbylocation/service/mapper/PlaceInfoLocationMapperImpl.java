@@ -7,6 +7,11 @@ import java.util.Set;
 import javax.annotation.processing.Generated;
 import org.ezgi.app.nearbylocation.entity.CoordinatInfoLocation;
 import org.ezgi.app.nearbylocation.entity.PlaceInfoLocation;
+import org.ezgi.app.nearbylocation.entity.classes.Location;
+import org.ezgi.app.nearbylocation.entity.classes.OpeningHours;
+import org.ezgi.app.nearbylocation.entity.classes.Photo;
+import org.ezgi.app.nearbylocation.entity.classes.Southwest;
+import org.ezgi.app.nearbylocation.entity.classes.Viewport;
 import org.ezgi.app.nearbylocation.search.dto.NearByLocationDTO;
 import org.ezgi.app.nearbylocation.search.dto.NearByLocationInfoDTO;
 import org.ezgi.app.nearbylocation.search.dto.classes.Geometry;
@@ -18,7 +23,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-07-28T00:35:15+0300",
+    date = "2024-07-29T18:20:30+0300",
     comments = "version: 1.5.5.Final, compiler: javac, environment: Java 17.0.4 (Oracle Corporation)"
 )
 @Component

@@ -15,6 +15,8 @@
     <name>NearByLocationServiceLib</name>
     <description>Find NearBy Locations</description>
 
+
+
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
@@ -28,6 +30,12 @@
             <groupId>org.ezgi</groupId>
             <artifactId>SearchNearByLocationLib</artifactId>
             <version>1.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.32</version>
         </dependency>
 
         <dependency>
@@ -86,7 +94,6 @@
                     </annotationProcessorPaths>
                 </configuration>
             </plugin>
-
         </plugins>
     </build>
 

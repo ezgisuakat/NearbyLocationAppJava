@@ -1,6 +1,5 @@
 package org.ezgi.app.nearbylocation.service;
 
-import com.karandev.util.data.service.DataServiceException;
 import org.ezgi.app.nearbylocation.dal.PlaceInfoLocationDataHelper;
 import org.ezgi.app.nearbylocation.entity.PlaceInfoLocation;
 import org.ezgi.app.nearbylocation.search.NearByLocationInfoSearchHelper;
@@ -44,12 +43,7 @@ public class PlaceInfoLocationService {
 
     public PlaceLocationDTO findLocationByLatitudeAndLongitudeAndRadius(double latitude, double longitude, double radius)
     {
-        try {
             return m_placeInfoLocationDataHelper.existLocationByLatitudeAndLongitudeAndRadius(latitude, longitude, radius) ? exitsInDbCallback(latitude, longitude, radius) : notExistsInDbCallback(latitude, longitude, radius);
-        }
-        catch(Throwable ex){
-            throw new DataServiceException("PlaceInfoLocationService.findLocation", ex);
-        }
     }
 
     //...
