@@ -1,7 +1,6 @@
 package org.ezgi.app.nearbylocation.repository;
 
 import org.ezgi.app.nearbylocation.entity.CoordinatInfoLocation;
-import org.ezgi.app.nearbylocation.entity.PlaceInfoLocation;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;

@@ -35,6 +35,7 @@ public interface IPlaceInfoLocationMapper {
         cil.longitude = longitude;
         cil.radius = radius;
         cil.placeInfoLocations = toPlaceInfoLocation(nearbyLocation.results);
+        cil.placeInfoLocations.forEach(pil -> pil.coordinatInfoLocation = cil);
 
         return cil;
     }

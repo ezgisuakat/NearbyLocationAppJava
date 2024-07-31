@@ -7,6 +7,7 @@ import org.ezgi.app.nearbylocation.service.dto.PlaceLocationDTO;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+
 @RestController
 @RequestMapping("/api/place/nearbysearch")
 public class NearByLocationController {

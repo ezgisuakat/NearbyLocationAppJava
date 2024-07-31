@@ -1,9 +1,7 @@
 package org.ezgi.app.nearbylocation.service;
 
 import org.ezgi.app.nearbylocation.dal.PlaceInfoLocationDataHelper;
-import org.ezgi.app.nearbylocation.entity.PlaceInfoLocation;
 import org.ezgi.app.nearbylocation.search.NearByLocationInfoSearchHelper;
-import org.ezgi.app.nearbylocation.service.dto.PlaceInfoLocationDTO;
 import org.ezgi.app.nearbylocation.service.dto.PlaceLocationDTO;
 import org.ezgi.app.nearbylocation.service.mapper.IPlaceInfoLocationMapper;
 import org.springframework.stereotype.Service;
@@ -34,7 +32,7 @@ public class PlaceInfoLocationService {
     private PlaceLocationDTO notExistsInDbCallback(double latitude, double longitude, double radius)
     {
         var nearbyLocation =  m_nearByLocationInfoSearchHelper.findNearByLocationByCoordinate(latitude, longitude, radius).get();
-
+        nearbyLocation.results.forEach(val -> System.out.println(val.business_status));
         var cil = m_placeInfoLocationDataHelper.saveCoordinatInfoLocation(m_placeInfoLocationMapper.toCoordinatInfoLocation(latitude, longitude, radius, nearbyLocation));
 
         return m_placeInfoLocationMapper.toPlaceLocationDTO(nearbyLocation);
@@ -43,7 +41,8 @@ public class PlaceInfoLocationService {
 
     public PlaceLocationDTO findLocationByLatitudeAndLongitudeAndRadius(double latitude, double longitude, double radius)
     {
-            return m_placeInfoLocationDataHelper.existLocationByLatitudeAndLongitudeAndRadius(latitude, longitude, radius) ? exitsInDbCallback(latitude, longitude, radius) : notExistsInDbCallback(latitude, longitude, radius);
+
+        return m_placeInfoLocationDataHelper.existLocationByLatitudeAndLongitudeAndRadius(latitude, longitude, radius) ? exitsInDbCallback(latitude, longitude, radius) : notExistsInDbCallback(latitude, longitude, radius);
     }
 
     //...

@@ -1,16 +1,13 @@
 package org.ezgi.app.nearbylocation.service.dto;
 
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import lombok.EqualsAndHashCode;
 
-import org.ezgi.app.nearbylocation.entity.PlaceInfoLocation;
 import org.ezgi.app.nearbylocation.search.dto.classes.Geometry;
 import org.ezgi.app.nearbylocation.search.dto.classes.OpeningHours;
 import org.ezgi.app.nearbylocation.search.dto.classes.Photo;
 import org.ezgi.app.nearbylocation.search.dto.classes.PlusCode;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
 
 @EqualsAndHashCode

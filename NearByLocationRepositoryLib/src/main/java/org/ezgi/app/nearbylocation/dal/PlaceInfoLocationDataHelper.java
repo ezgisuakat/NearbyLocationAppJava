@@ -1,7 +1,6 @@
 package org.ezgi.app.nearbylocation.dal;
 
 import org.ezgi.app.nearbylocation.entity.CoordinatInfoLocation;
-import org.ezgi.app.nearbylocation.entity.PlaceInfoLocation;
 import org.ezgi.app.nearbylocation.repository.ICoordinatInfoLocationRepository;
 import org.ezgi.app.nearbylocation.repository.IPlaceInfoLocationRepository;
 import org.springframework.stereotype.Component;
@@ -52,7 +51,7 @@ public class PlaceInfoLocationDataHelper {
         }
         catch(Throwable ex)
         {
-            throw new RuntimeException("NearByLocationRepositoryLib.saveCoordinatInfoLocation", ex);
+            throw new RuntimeException("NearByLocationRepositoryLib.saveCoordinatInfoLocation:" + ex.getMessage());
         }
     }
     //...
